@@ -40,6 +40,7 @@ public class MovingPlatform : MonoBehaviour
                 movingLeft = true;
             }
         }
+<<<<<<< HEAD
     } 
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -59,4 +60,7 @@ public class MovingPlatform : MonoBehaviour
             transform.parent = null;
         }
     }
+=======
+    }
+>>>>>>> e6c0d3a97968e72ca9b9bfac556f7d560c4289c5
 }
