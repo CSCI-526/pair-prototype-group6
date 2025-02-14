@@ -118,6 +118,9 @@ public class PlayerController : MonoBehaviour
         {
             isGrounded = true;
         }
+        else if (collision.collider.CompareTag("MovingPlatform")){
+            transform.parent = collision.transform;
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -125,6 +128,9 @@ public class PlayerController : MonoBehaviour
         if (collision.collider.CompareTag("Ground"))
         {
             isGrounded = false;
+        }
+        else if (collision.collider.CompareTag("MovingPlatform")){
+            transform.parent = null;
         }
     }
 }

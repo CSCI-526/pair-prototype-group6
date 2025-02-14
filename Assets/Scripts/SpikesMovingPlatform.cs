@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class MovingPlatform : MonoBehaviour
+public class SpikesMovingPlatform : MonoBehaviour
 {
     public float movementDistance;
     public float speed;
@@ -42,21 +43,12 @@ public class MovingPlatform : MonoBehaviour
         }
     } 
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.CompareTag("Player")) // Check if it's the player
-        {
-            // collision.transform.SetParent(transform); // Attach player to platform
-            transform.parent = collision.transform;
+        if(other.CompareTag("Player")){
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player")) // Check if it's the player
-        {
-            // collision.transform.SetParent(null); // Detach player from platform
-            transform.parent = null;
-        }
-    }
+   
 }
