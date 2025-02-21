@@ -120,6 +120,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (collision.collider.CompareTag("MovingPlatform")){
             transform.parent = collision.transform;
+            isGrounded = true;
         }
     }
 
@@ -131,6 +132,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (collision.collider.CompareTag("MovingPlatform")){
             transform.parent = null;
+            isGrounded = false;
         }
     }
 }

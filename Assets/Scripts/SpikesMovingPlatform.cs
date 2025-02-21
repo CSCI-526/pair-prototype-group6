@@ -36,6 +36,7 @@ public float speed;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Collision with: " + other.gameObject.name);
         if(other.CompareTag("Player")){
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }

@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "PairedProto.sln"
+    "dotnet.defaultSolution": "pair-prototype-group6.sln"
 }

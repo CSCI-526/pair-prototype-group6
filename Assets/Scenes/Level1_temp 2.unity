@@ -1306,6 +1306,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpikesMovingPlatform
       objectReference: {fileID: 0}
+    - target: {fileID: 5283862555989177534, guid: 8752bd27c1f5f423085a6a3c7727c85e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6127387748680714666, guid: 8752bd27c1f5f423085a6a3c7727c85e, type: 3}
       propertyPath: speed
       value: 2
@@ -1808,10 +1812,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af98dac4a71194a31b2d66a76238b429, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 0}
-  firePoint: {fileID: 0}
-  bulletSpeed: 5
-  fireRate: 1.5
 --- !u!58 &2106342257
 CircleCollider2D:
   m_ObjectHideFlags: 0
