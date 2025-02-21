@@ -38,8 +38,8 @@ public class MovingPlatform : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player")) // Check if it's the player
         {
-            // collision.transform.SetParent(transform); // Attach player to platform
-            transform.parent = collision.transform;
+            collision.transform.SetParent(transform); // Attach player to platform
+            // transform.parent = collision.transform;
         }
     }
 
@@ -47,8 +47,8 @@ public class MovingPlatform : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player")) // Check if it's the player
         {
-            // collision.transform.SetParent(null); // Detach player from platform
-            transform.parent = null;
+            collision.transform.SetParent(null); // Detach player from platform
+            // transform.parent = null;
         }
     }
 }
