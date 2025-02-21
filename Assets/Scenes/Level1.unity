@@ -2172,6 +2172,14 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5324017003764594994, guid: b6440dd2c0c0a4e27b5fb12a73080c70, type: 3}
+      propertyPath: pointA
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324017003764594994, guid: b6440dd2c0c0a4e27b5fb12a73080c70, type: 3}
+      propertyPath: pointB
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 6783333865241112207, guid: b6440dd2c0c0a4e27b5fb12a73080c70, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.68
