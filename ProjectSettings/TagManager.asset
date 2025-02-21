@@ -8,6 +8,7 @@ TagManager:
   - DelayZone
   - MovingPlatform
   - Bullet
+  - Enemy
   layers:
   - Default
   - TransparentFX
