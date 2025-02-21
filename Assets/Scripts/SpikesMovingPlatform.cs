@@ -5,41 +5,32 @@ using UnityEngine.SceneManagement;
 
 public class SpikesMovingPlatform : MonoBehaviour
 {
-    public float movementDistance;
-    public float speed;
+public float speed;
 
-    private bool movingLeft;
-    private float leftEdge;
-    private float rightEdge;
-
+    public float pointA = -3f; // Leftmost position
+    public float pointB = 3f;  // Rightmost position
+    private float target;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        leftEdge = transform.position.x - movementDistance;
-        rightEdge = transform.position.x + movementDistance;
-        movingLeft = true;
+        target = pointB;  // Start moving towards pointB
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(movingLeft){
-            if(transform.position.x > leftEdge){
-                transform.position = new Vector3(transform.position.x - speed * Time.deltaTime, transform.position.y, transform.position.z);
-            }
-            else{
-                movingLeft = false;
-            }
-        }
-        else{
-            if(transform.position.x < rightEdge){
-                transform.position = new Vector3(transform.position.x + speed * Time.deltaTime, transform.position.y, transform.position.z);
-            }
-            else{
-                movingLeft = true;
-            }
+        transform.position = new Vector3(
+            Mathf.MoveTowards(transform.position.x, target, speed * Time.deltaTime),
+            transform.position.y,
+            transform.position.z
+        );
+
+        // Switch direction when reaching the target
+        if (Mathf.Abs(transform.position.x - target) < 0.1f)
+        {
+            target = (target == pointA) ? pointB : pointA;
         }
     } 
 

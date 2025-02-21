@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1500659881304353991}
   - component: {fileID: 6216702919782256783}
   - component: {fileID: 4092662221110507537}
-  - component: {fileID: 6160977940440438748}
+  - component: {fileID: 3519979206052477586}
   m_Layer: 0
   m_Name: MovingPlatform
   m_TagString: Untagged
@@ -155,7 +155,7 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!114 &6160977940440438748
+--- !u!114 &3519979206052477586
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -164,8 +164,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3452476761014423914}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 528ef2cce877f4397b79bb6fadc90304, type: 3}
+  m_Script: {fileID: 11500000, guid: f918aef4329224825850b8a4c662920e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementDistance: 5.5
-  speed: 2
+  speed: 0
+  pointA: -3
+  pointB: 3
